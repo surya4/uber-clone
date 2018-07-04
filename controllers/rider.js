@@ -1,0 +1,1 @@
+let riders = ['rider1', 'rider2', 'rider3', 'rider4', 'rider5']
