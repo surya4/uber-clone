@@ -77,7 +77,8 @@ app.use((err, req, res, next) => {
 
     // render the error page
     res.status(err.status || 520);
-    res.render('error');
+    console.log("error", err)
+    // res.render('error');
 });
 
 module.exports = app;

@@ -39,14 +39,22 @@ a:hover {
 }
 
 .centre-main {
-    background-color: green;
-    height: 95%;
+    /* background-color: green; */
+    height: 96%;
     width: 100%;
 }
 
 hr {
     color: #000;
 }
+
+#map {
+    height: 95%;
+    width: 100%;
+    /* width: 100%;
+    height: 400px; */
+    background-color: grey;
+  }
 
 footer {
     position: absolute;

@@ -7,22 +7,21 @@ let riderController = require('../controllers/rider');
 // let contactController = require('../mongoControllers/contact');
 
 // index home page
-router.get('/', riderController.getIndexMap);
+// router.get('/', riderController.getIndexMap);
 
 router.get('/', (req, res, next) => {
-  riderController.getIndexMap()
-  .then( (response) => {
-    console.log("1", response)
+  // riderController.getIndexMap()
+  // .then((response) => {
+    // console.log("1sds", response[0].geometry.location)
     res.render('index', {
       'title': 'Uber Clone',
-      'data' : response
+      // 'location' : response[0].geometry.location
   });
-  resolve();
-  })
-  .catch((err) => {
-    console.log("2", err)
-    reject(err);
-  })
+  // return;
+  // })
+  // .catch((err) => {
+    // return err;
+  // })
 });
 
 
