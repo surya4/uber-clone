@@ -40,81 +40,9 @@ a:hover {
 
 .centre-main {
     background-color: green;
-    height: 100px;
-    width: 100px;
+    height: 95%;
+    width: 100%;
 }
-
-/* social buttons */
-
-
-/* 
-.btn-toolbar {
-    display: flex;
-} */
-
-
-/* .btn-link-1:hover,
-.btn-link-1:focus,
-.btn-link-1:active {
-    outline: 0;
-    opacity: 0.6;
-    color: #fff;
-} */
-
-.btn-link-1.btn-link-facebook {
-    background: #4862a3;
-    /* margin-left: 100px; */
-}
-
-.btn-link-1.btn-link-twitter {
-    background: #55acee;
-    /* margin-left: 20px; */
-}
-
-.btn-link-1.btn-link-google-plus {
-    background: #dd4b39;
-    /* margin-left: 20px; */
-}
-
-.btn-link-1.btn-link-github {
-    background: #333333;
-    /* margin-left: 20px; */
-}
-
-
-/* .btn-link-1 i {
-    padding-right: 5px;
-    vertical-align: middle;
-    font-size: 20px;
-    line-height: 20px;
-} */
-
-
-/* .btn-link-2 {
-    display: inline-block;
-    height: 50px;
-    margin: 5px;
-    padding: 15px 20px 0 20px;
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid #fff;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 16px;
-    color: #fff;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-}
-
-.btn-link-2:hover,
-.btn-link-2:focus,
-.btn-link-2:active,
-.btn-link-2:active:focus {
-    outline: 0;
-    opacity: 0.6;
-    background: rgba(0, 0, 0, 0.3);
-    color: #fff;
-} */
 
 hr {
     color: #000;

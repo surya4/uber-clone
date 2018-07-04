@@ -13,7 +13,7 @@ let riderController = require('../controllers/rider');
 router.get('/', function(req, res) {
   console.log("12")
   // res.header('Access-Control-Allow-Origin', "*")
-  res.render('ride');
+  res.render('index');
 });
 
 // // user profile page
