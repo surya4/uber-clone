@@ -5,7 +5,7 @@
  */
 
 var http = require('http');
-var debug = require('debug')('title:uber-clone');
+var debug = require('debug')('title:dropbox-clone');
 var app = require('../app');
 
 /**
