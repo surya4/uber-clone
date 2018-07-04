@@ -7,14 +7,30 @@ let riderController = require('../controllers/rider');
 // let contactController = require('../mongoControllers/contact');
 
 // index home page
-// router.get('/', riderController.getIndex);
+router.get('/', riderController.getIndexMap);
 
-
-router.get('/', function(req, res) {
-  console.log("12")
-  // res.header('Access-Control-Allow-Origin', "*")
-  res.render('index');
+router.get('/', (req, res, next) => {
+  riderController.getIndexMap()
+  .then( (response) => {
+    console.log("1", response)
+    res.render('index', {
+      'title': 'Uber Clone',
+      'data' : response
+  });
+  resolve();
+  })
+  .catch((err) => {
+    console.log("2", err)
+    reject(err);
+  })
 });
+
+
+// router.get('/', function(req, res) {
+//   console.log("12")
+//   // res.header('Access-Control-Allow-Origin', "*")
+//   res.render('index');
+// });
 
 // // user profile page
 // router.get('/profile', userController.ensureAuthenticated, userController.profileGet);
