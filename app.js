@@ -7,7 +7,7 @@ var methodOverride = require('method-override');
 // var flash = require('express-flash');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-var expressValidator = require('express-validator');
+// var expressValidator = require('express-validator');
 const dotenv = require('dotenv');
 // var passport = require('passport');
 
@@ -25,7 +25,7 @@ let driver = require('./routes/driver');
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(__dirname, './views/pages'));
 app.set('view engine', 'ejs');
 
 // app.use(favicon(path.join(__dirname, './public', '/images/favicon.ico')));
@@ -33,7 +33,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(expressValidator());
+// app.use(expressValidator());
 app.use(methodOverride('_method'));
 // app.use(session({
 //     secret: process.env.SESSION_SECRET,
@@ -50,16 +50,17 @@ app.use(function(req, res, next) {
 
 app.use(express.static(path.join(__dirname, './public')));
 
-app.use('/rider', rider);
-app.use('/driver', driver);
+// app.use('/rider', rider);
+app.use('/', rider);
+// app.use('/driver', driver);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
     let err = new Error('Not Found');
     err.status = 404;
-    // res.render('pages/404', {
-    //     'message': 'Page not found'
-    // });
+    res.render('404', {
+        'message': 'Page not found'
+    });
     next(err);
 });
 
@@ -70,8 +71,8 @@ app.use((err, req, res, next) => {
     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
     // render the error page
-    res.status(err.status || 500);
-    res.render('pages/error');
+    res.status(err.status || 520);
+    res.render('error');
 });
 
 module.exports = app;

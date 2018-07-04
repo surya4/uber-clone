@@ -34,6 +34,15 @@ a:hover {
     text-decoration: none;
 }
 
+.title {
+    padding-top: 12px;
+}
+
+.centre-main {
+    background-color: green;
+    height: 100px;
+    width: 100px;
+}
 
 /* social buttons */
 

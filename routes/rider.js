@@ -2,12 +2,19 @@ let express = require('express');
 let router = express.Router();
 
 // controllers
-// let homeController = require('../mongoControllers/index');
+let riderController = require('../controllers/rider');
 // let userController = require('../mongoControllers/user');
 // let contactController = require('../mongoControllers/contact');
 
 // index home page
-// router.get('/', homeController.index_get);
+// router.get('/', riderController.getIndex);
+
+
+router.get('/', function(req, res) {
+  console.log("12")
+  // res.header('Access-Control-Allow-Origin', "*")
+  res.render('ride');
+});
 
 // // user profile page
 // router.get('/profile', userController.ensureAuthenticated, userController.profileGet);
