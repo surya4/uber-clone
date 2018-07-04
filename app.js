@@ -4,7 +4,7 @@ const path = require('path');
 const morgan = require('morgan');
 var methodOverride = require('method-override');
 // var session = require('express-session');
-var flash = require('express-flash');
+// var flash = require('express-flash');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
@@ -40,7 +40,7 @@ app.use(methodOverride('_method'));
 //     resave: true,
 //     saveUninitialized: true
 // }));
-app.use(flash());
+// app.use(flash());
 // app.use(passport.initialize());
 // app.use(passport.session());
 app.use(function(req, res, next) {
