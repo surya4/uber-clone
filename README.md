@@ -11,3 +11,9 @@
 - **Database**: cassandra
 - **ORM**: 
 - **Deployment**: aws
+
+### How to build: 
+docker build -t uber-clone .
+
+### How to run 
+docker run --rm -it -p 3000:3000 uber-clone  
